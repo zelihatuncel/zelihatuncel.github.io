@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Zeliha Tuncel - Özgeçmiş</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+        
+        * {
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Inter', Helvetica, sans-serif;
+            background-color: #f3f4f6;
+            margin: 0;
+            padding: 40px 20px;
+            color: #1f2937;
+        }
+        .cv-document {
+            background-color: #ffffff;
+            max-width: 850px;
+            margin: 0 auto;
+            padding: 50px 60px;
+            box-shadow: 0 10px 25px rgba(0,0,0,0.1);
+        }
+        /* Başlık ve İletişim */
+        .header {
+            text-align: center;
+            margin-bottom: 20px;
+        }
+        .header h1 {
+            font-size: 32px;
+            margin: 0 0 5px 0;
+            color: #111827;
+            font-weight: 700;
+            letter-spacing: -0.5px;
+        }
+        .header h2 {
+            font-size: 16px;
+            color: #10b981;
+            margin: 0 0 15px 0;
+            font-weight: 600;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 15px;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+        .contact-info div {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+        }
+        .contact-info a {
+            color: #4b5563;
+            text-decoration: none;
+            font-weight: 500;
+        }
+        .divider {
+            border: 0;
+            border-top: 2px solid #111827;
+            margin: 20px 0 25px 0;
+        }
+        
+        /* İki Sütunlu Yapı */
+        .cv-body {
+            display: flex;
+            gap: 40px;
+        }
+        .col-left {
+            width: 35%;
+        }
+        .col-right {
+            width: 65%;
+        }
+        
+        /* Bölüm Başlıkları */
+        .section-title {
+            font-size: 15px;
+            font-weight: 700;
+            text-transform: uppercase;
+            color: #1f2937;
+            border-bottom: 1px solid #d1d5db;
+            padding-bottom: 5px;
+            margin-bottom: 15px;
+            letter-spacing: 0.5px;
+        }
+        
+        /* Metin ve Listeler */
+        p {
+            font-size: 13px;
+            line-height: 1.6;
+            margin: 0 0 15px 0;
+            text-align: justify;
+        }
+        ul {
+            margin: 0 0 25px 0;
+            padding-left: 18px;
+            font-size: 13px;
+            line-height: 1.6;
+        }
+        li {
+            margin-bottom: 8px;
+        }
+        .cert-link {
+            color: #3B82F6;
+            text-decoration: none;
+            font-weight: 500;
+            font-size: 12px;
+            display: inline-block;
+            margin-top: 2px;
+        }
+        .cert-link:hover {
+            text-decoration: underline;
+        }
+        
+        /* Proje ve Deneyim Öğeleri */
+        .item-group {
+            margin-bottom: 22px;
+        }
+        .item-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: baseline;
+            margin-bottom: 2px;
+        }
+        .item-title {
+            font-weight: 700;
+            font-size: 14px;
+            color: #111827;
+        }
+        .item-date {
+            font-weight: 700;
+            font-size: 12px;
+            color: #10b981;
+        }
+        .item-subtitle {
+            font-style: italic;
+            font-size: 13px;
+            color: #4b5563;
+            margin-bottom: 8px;
+        }
+        .item-subtitle a {
+            color: #4b5563;
+            text-decoration: none;
+        }
+
+        /* Çıktı (Print) Ayarları */
+        @media print {
+            body { background: #fff; padding: 0; }
+            .cv-document { box-shadow: none; padding: 0; max-width: 100%; }
+            .cert-link { display: none; }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="cv-document">
+        
+        <!-- Başlık ve İletişim -->
+        <div class="header">
+            <h1>Zeliha Tuncel</h1>
+            <h2>Full-Stack Web Geliştirici & IT Uzmanı</h2>
+            
+            <div class="contact-info">
+                <div>📍 İstanbul, Türkiye</div>
+                <div>✉ <a href="mailto:tuncelzeliha235@gmail.com">tuncelzeliha235@gmail.com</a></div>
+                <!-- Telefon numarası gizlilik amacıyla açık versiyondan kaldırıldı -->
+            </div>
+            <div class="contact-info">
+                <div>🔗 <a href="https://linkedin.com/in/zeliha-tuncel" target="_blank">linkedin.com/in/zeliha-tuncel</a></div>
+                <div>💻 <a href="https://github.com/zelihatuncel" target="_blank">github.com/zelihatuncel</a></div>
+            </div>
+        </div>
+
+        <hr class="divider">
+
+        <!-- Ana İçerik Alanı -->
+        <div class="cv-body">
+            
+            <!-- SOL SÜTUN -->
+            <div class="col-left">
+                
+                <div class="section-title">HAKKINDA</div>
+                <p>
+                    Modern web teknolojileri ve SQL Server ile güvenli, ölçeklenebilir backend sistemleri kuran ve uçtan uca deployment süreçlerini yöneten Full-Stack Yazılım Geliştiriciyim.
+                </p>
+
+                <div class="section-title">EĞİTİM</div>
+                <div class="item-group">
+                    <div class="item-header">
+                        <span class="item-title">İstinye Üniversitesi</span>
+                        <span class="item-date">Temmuz 2026</span>
+                    </div>
+                    <div class="item-subtitle">Ön Lisans - Bilgisayar Teknolojisi</div>
+                    <p style="margin-bottom: 0;">İstanbul, Türkiye</p>
+                </div>
+                
+                <div class="section-title" style="margin-top: 20px;">SERTİFİKALAR VE EĞİTİMLER</div>
+                <ul style="margin-bottom: 0; padding-left: 14px;">
+                    <li>
+                        <strong>Sorgularla Adım Adım SQL Veri Tabanı Programlama</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">Udemy</span><br>
+                        <a href="https://ude.my/UC-4aeb11d8-691b-4b41-b724-47085caaf273" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>Linux A-Z™ | Uygulamalarla Sıfırdan Linux Eğitimi</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">Udemy</span><br>
+                        <a href="https://ude.my/UC-33fd65b6-2ac1-41ac-85df-be724805c2fd" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>C Programlama: Sıfırdan İleri Seviye Uygulamalı C Dersleri</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">Udemy</span><br>
+                        <a href="https://ude.my/UC-2b6a121f-9275-43a7-a5fb-0b352a0c2967" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>C Programlama Dili</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">BTK Akademi</span><br>
+                        <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=jK1hG16NYp" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>Yapay Zeka ve Algoritmalarına Giriş</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">BTK Akademi</span><br>
+                        <a href="https://www.btkakademi.gov.tr/portal/certificate/validate?certificateId=Yx1h88pOEk" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>Veri Okuryazarlığı Eğitimi</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">23 | Yirmi Üç</span><br>
+                        <a href="https://yirmiuc.org/sertifikalar/a4a1e23b-4af0-4e9b-adee-980bdf99b887/" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>Web Programlama (HTML5, CSS3, Bootstrap5, Javascript)</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">Techcareer.net</span><br>
+                        <a href="https://credsverse.com/credentials/f61b1b03-a928-4eec-b6c3-a2ac43b83d45?preview=1" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                    <li>
+                        <strong>Etkili Konuşma (Effective Speaking)</strong><br>
+                        <span style="color: #6b7280; font-size: 11px;">Koç Üniversitesi (Coursera)</span><br>
+                        <a href="https://www.coursera.org/account/accomplishments/verify/RAZ774GY13JY" target="_blank" class="cert-link">[Sertifikayı Görüntüle]</a>
+                    </li>
+                </ul>
+
+            </div>
+
+            <!-- SAĞ SÜTUN -->
+            <div class="col-right">
+                
+                <div class="section-title">PROJELER</div>
+                
+                <div class="item-group">
+                    <div class="item-header">
+                        <span class="item-title">Aura Parfüm - B2C E-Ticaret Platformu</span>
+                    </div>
+                    <div class="item-subtitle">Full-Stack Geliştirici | (Bkz: <a href="https://github.com/zelihatuncel/Aura-Parfum-Showcase" target="_blank">github.com/zelihatuncel/Aura-Parfum-Showcase</a>)</div>
+                    <ul>
+                        <li>Hazır şablon kullanılmadan HTML5, CSS3 ve JavaScript ile lüks marka kimliğine uygun, mobil uyumlu (responsive) dinamik bir kullanıcı arayüzü kodlandı.</li>
+                        <li>Kullanıcı oturumları, sepet mantığı ve ürün stok takibini yönetmek üzere Node.js ve Express.js kullanılarak asenkron RESTful API uçları geliştirildi.</li>
+                        <li>Microsoft SQL Server üzerinde kullanıcılar, kategoriler ve siparişlerin birbirine bağlandığı "İlişkisel Veritabanı" mimarisi sıfırdan tasarlandı.</li>
+                    </ul>
+                </div>
+
+                <div class="item-group">
+                    <div class="item-header">
+                        <span class="item-title">İBB Wi-Fi Lokasyon Verileri SQL Analizi</span>
+                    </div>
+                    <div class="item-subtitle">Veritabanı Analisti | (Bkz: <a href="https://github.com/zelihatuncel/IBB-WiFi-SQL-Veri-Analizi" target="_blank">github.com/zelihatuncel/IBB-WiFi-SQL-Veri-Analizi</a>)</div>
+                    <ul>
+                        <li>İBB Açık Veri Portalı'ndan elde edilen kurumsal Wi-Fi lokasyon verilerinin SSMS kullanılarak iç aktarımı sağlandı.</li>
+                        <li>Flat file data import işlemleri ve SQL sorguları (WHERE, LIKE vb.) ile Gaziosmanpaşa bölgesi hedeflenerek veri filtreleme analizi gerçekleştirildi.</li>
+                    </ul>
+                </div>
+
+                <div class="item-group">
+                    <div class="item-header">
+                        <span class="item-title">Kurumsal Ağ Mimarisi</span>
+                    </div>
+                    <div class="item-subtitle">Cisco Packet Tracer</div>
+                    <ul>
+                        <li>Cisco Packet Tracer üzerinde departmanlar arası (Bilgi İşlem, İK, Finans vb.) veri izolasyonu sağlayan 3 katmanlı VLAN mimarisi tasarlandı.</li>
+                        <li>Farklı ağların birbiriyle güvenli iletişim kurabilmesi için Router-on-a-Stick yapılandırması gerçekleştirildi.</li>
+                    </ul>
+                </div>
+
+                <div class="item-group" style="margin-bottom: 30px;">
+                    <div class="item-header">
+                        <span class="item-title">Windows Sistem Raporlama Otomasyonu</span>
+                    </div>
+                    <div class="item-subtitle">Bash Scripting</div>
+                    <ul>
+                        <li>GPG AES256 şifreleme ve donanım raporlama süreçlerini otomatize eden Bash betikleri geliştirildi.</li>
+                        <li>Oluşturulan raporlar GitHub üzerinde SSH imzalı commit yapısıyla versiyonlandı.</li>
+                    </ul>
+                </div>
+
+                <div class="section-title">İŞ DENEYİMİ</div>
+                <div class="item-group">
+                    <div class="item-header">
+                        <span class="item-title">Gaziosmanpaşa Belediyesi</span>
+                        <span class="item-date">2026 (1 Ay)</span>
+                    </div>
+                    <div class="item-subtitle">Bilgi İşlem ve Yazılım Stajyeri</div>
+                    <ul>
+                        <li>Bilgi işlem departmanında hem yazılım hem de donanım operasyonlarına aktif destek sağlandı. Ağ topolojileri ve sistem bakımı üzerine pratik tecrübe edinildi.</li>
+                    </ul>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+</body>
+</html>
