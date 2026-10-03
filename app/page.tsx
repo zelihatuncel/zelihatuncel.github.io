@@ -1,6 +1,5 @@
 "use client";
 
-import { motion } from "framer-motion";
 import {
   Terminal,
   Database,
@@ -13,55 +12,17 @@ import {
 } from "lucide-react";
 
 export default function Portfolio() {
-  // Animasyon Ayarları
-  const fadeInUp = {
-    hidden: { opacity: 0, y: 40 },
-    show: {
-      opacity: 1,
-      y: 0,
-      transition: { duration: 0.6, ease: "easeOut" },
-    },
-  };
-
-  const staggerContainer = {
-    hidden: { opacity: 0 },
-    show: {
-      opacity: 1,
-      transition: {
-        staggerChildren: 0.2, // Kartların sırayla (0.2sn arayla) gelmesini sağlar
-      },
-    },
-  };
-
   return (
     <div className="min-h-screen bg-[#0A0A0F] text-white overflow-hidden relative font-sans">
       {/* Arka Plan Işıkları */}
       <div className="fixed inset-0 z-[0] pointer-events-none">
-        <motion.div
-          animate={{ scale: [1, 1.2, 1], opacity: [0.15, 0.25, 0.15] }}
-          transition={{ duration: 8, repeat: Infinity, ease: "easeInOut" }}
-          className="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-600/20 blur-[120px]"
-        />
-        <motion.div
-          animate={{ scale: [1, 1.3, 1], opacity: [0.15, 0.2, 0.15] }}
-          transition={{
-            duration: 10,
-            repeat: Infinity,
-            ease: "easeInOut",
-            delay: 1,
-          }}
-          className="absolute -bottom-[10%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-violet-600/20 blur-[120px]"
-        />
+        <div className="absolute -top-[10%] -left-[10%] w-[50vw] h-[50vw] rounded-full bg-blue-600/20 blur-[120px]" />
+        <div className="absolute -bottom-[10%] -right-[10%] w-[50vw] h-[50vw] rounded-full bg-violet-600/20 blur-[120px]" />
       </div>
 
       <div className="relative z-10 max-w-6xl mx-auto px-6 py-24">
         {/* HERO */}
-        <motion.section
-          initial="hidden"
-          animate="show"
-          variants={fadeInUp}
-          className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-32"
-        >
+        <section className="flex flex-col-reverse md:flex-row items-center justify-between gap-12 mb-32">
           <div className="flex-1 text-center md:text-left">
             <h2 className="text-blue-500 font-semibold tracking-wider uppercase mb-4 text-sm">
               İstinye Üniversitesi Mezunu
@@ -107,17 +68,11 @@ export default function Portfolio() {
               className="w-full h-full object-cover rounded-full border-4 border-[#12121A] shadow-[0_0_40px_rgba(59,130,246,0.2)]"
             />
           </div>
-        </motion.section>
+        </section>
 
-        {/* 2. TEKNOLOJİLER (SCROLL ANIMASYONLU) */}
-        <motion.section
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.2 }}
-          className="mb-32"
-        >
-          <motion.div variants={fadeInUp} className="text-center mb-16">
+        {/* 2. TEKNOLOJİLER */}
+        <section className="mb-32">
+          <div className="text-center mb-16">
             <span className="inline-flex p-3 rounded-2xl bg-blue-600/20 text-blue-500 mb-4">
               <Code2 size={32} />
             </span>
@@ -127,14 +82,11 @@ export default function Portfolio() {
             <p className="text-gray-400">
               Web Geliştirme, Veritabanı Yönetimi, Linux ve Cisco Ağ Mimarileri.
             </p>
-          </motion.div>
+          </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-blue-500/30 transition-all">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-blue-500/50 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-blue-500/20 text-blue-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
                 <Code2 size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Frontend & Backend</h3>
@@ -158,13 +110,10 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-violet-500/50 transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className="w-14 h-14 bg-violet-500/20 text-violet-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-violet-500/30 transition-all">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-violet-500/50 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-violet-500/20 text-violet-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
                 <Database size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Veritabanı Yönetimi</h3>
@@ -184,13 +133,10 @@ export default function Portfolio() {
                   ),
                 )}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-green-500/50 transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className="w-14 h-14 bg-green-500/20 text-green-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-green-500/30 transition-all">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-green-500/50 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-green-500/20 text-green-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
                 <Network size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Sistem & Ağ Mimarisi</h3>
@@ -213,13 +159,10 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
 
-            <motion.div
-              variants={fadeInUp}
-              className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-orange-500/50 transition-all duration-300 hover:-translate-y-2 group"
-            >
-              <div className="w-14 h-14 bg-orange-500/20 text-orange-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 group-hover:bg-orange-500/30 transition-all">
+            <div className="bg-white/5 backdrop-blur-xl border border-white/10 rounded-3xl p-8 hover:bg-white/10 hover:border-orange-500/50 transition-all duration-300 group">
+              <div className="w-14 h-14 bg-orange-500/20 text-orange-400 rounded-2xl flex items-center justify-center mb-6 group-hover:scale-110 transition-all">
                 <Terminal size={28} />
               </div>
               <h3 className="text-2xl font-bold mb-3">Algoritma & Araçlar</h3>
@@ -242,30 +185,19 @@ export default function Portfolio() {
                   </span>
                 ))}
               </div>
-            </motion.div>
+            </div>
           </div>
-        </motion.section>
+        </section>
 
         {/* 3. PROJELER VE DENEYİM */}
-        <motion.section
-          variants={staggerContainer}
-          initial="hidden"
-          whileInView="show"
-          viewport={{ once: true, amount: 0.1 }}
-        >
+        <section>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
             <div className="space-y-8">
-              <motion.h3
-                variants={fadeInUp}
-                className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4"
-              >
+              <h3 className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4">
                 <Briefcase className="text-blue-500" /> Sektörel Deneyim
-              </motion.h3>
+              </h3>
 
-              <motion.div
-                variants={fadeInUp}
-                className="relative pl-8 border-l border-white/10"
-              >
+              <div className="relative pl-8 border-l border-white/10">
                 <div className="absolute w-4 h-4 bg-blue-500 rounded-full -left-[8px] top-1 shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
                 <h4 className="text-xl font-bold">
                   IT / Technical Service (Stajyer)
@@ -278,19 +210,13 @@ export default function Portfolio() {
                   operasyonlarına ve ağ sorunlarının çözümüne teknik destek
                   sağladım.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.h3
-                variants={fadeInUp}
-                className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4 pt-8"
-              >
+              <h3 className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4 pt-8">
                 <GraduationCap className="text-violet-500" /> Akademik Eğitim
-              </motion.h3>
+              </h3>
 
-              <motion.div
-                variants={fadeInUp}
-                className="relative pl-8 border-l border-white/10"
-              >
+              <div className="relative pl-8 border-l border-white/10">
                 <div className="absolute w-4 h-4 bg-violet-500 rounded-full -left-[8px] top-1 shadow-[0_0_10px_rgba(139,92,246,0.8)]" />
                 <h4 className="text-xl font-bold">
                   Bilgisayar Teknolojisi (Ön Lisans)
@@ -302,21 +228,15 @@ export default function Portfolio() {
                   Veritabanı yönetimi, yazılım algoritmaları ve ağ sistemleri
                   üzerine akademik eğitimimi tamamlayarak mezun oldum.
                 </p>
-              </motion.div>
+              </div>
             </div>
 
             <div className="space-y-8">
-              <motion.h3
-                variants={fadeInUp}
-                className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4"
-              >
+              <h3 className="text-2xl font-bold flex items-center gap-3 border-b border-white/10 pb-4">
                 <Code2 className="text-green-500" /> Mimari Projeler
-              </motion.h3>
+              </h3>
 
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors"
-              >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="text-lg font-bold">Aura Parfüm Platformu</h4>
                   <span className="text-xs px-2 py-1 bg-blue-500/20 text-blue-400 rounded-full">
@@ -328,13 +248,9 @@ export default function Portfolio() {
                   Server üzerinde ACID prensiplerine uygun sipariş akışı
                   kurgulandı. Node.js REST API altyapılı e-ticaret platformu.
                 </p>
-              </motion.div>
+              </div>
 
-              {/* YENİ EKLENEN İBB SQL PROJESİ */}
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors"
-              >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="text-lg font-bold">
                     İBB Wi-Fi SQL Veri Analizi
@@ -346,16 +262,12 @@ export default function Portfolio() {
                 <p className="text-gray-400 text-sm leading-relaxed mb-4">
                   İBB Açık Veri Portalı'ndan elde edilen kurumsal Wi-Fi lokasyon
                   verilerinin SSMS kullanılarak iç aktarımı sağlandı. Data
-                  import işlemleri ve SQL sorguları (WHERE, LIKE vb.) ile
-                  Gaziosmanpaşa bölgesi hedeflenerek bölgesel veri analizi
-                  gerçekleştirildi.
+                  import işlemleri ve SQL sorguları ile Gaziosmanpaşa bölgesi
+                  hedeflenerek bölgesel veri analizi gerçekleştirildi.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors"
-              >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="text-lg font-bold">Kurumsal Ağ Mimarisi</h4>
                   <span className="text-xs px-2 py-1 bg-green-500/20 text-green-400 rounded-full">
@@ -367,12 +279,9 @@ export default function Portfolio() {
                   izolasyonu sağlayan 3 katmanlı VLAN mimarisi ve
                   Router-on-a-Stick yapılandırması tasarlandı.
                 </p>
-              </motion.div>
+              </div>
 
-              <motion.div
-                variants={fadeInUp}
-                className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors"
-              >
+              <div className="bg-white/5 backdrop-blur-sm border border-white/10 p-6 rounded-2xl hover:bg-white/10 transition-colors">
                 <div className="flex justify-between items-start mb-2">
                   <h4 className="text-lg font-bold">Linux Sistem Otomasyonu</h4>
                   <span className="text-xs px-2 py-1 bg-orange-500/20 text-orange-400 rounded-full">
@@ -384,10 +293,10 @@ export default function Portfolio() {
                   otomatize eden, GitHub üzerinde SSH imzalı commit yapısıyla
                   versiyonlanan sistem yönetim betiği.
                 </p>
-              </motion.div>
+              </div>
             </div>
           </div>
-        </motion.section>
+        </section>
       </div>
 
       <footer className="relative z-10 border-t border-white/10 bg-[#0A0A0F]/80 backdrop-blur-md py-8 mt-12">
